@@ -3,33 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/loginpage.css">
     <title>Login</title>
 </head>
 <body>
     <table>
         <tr>
-            <td>
+            <td id="left">
                 <fieldset>
+                    <h1 id="logo"><span>T</span></h1>
+                    <h3 id="logo2"><span>Tour Management System</span></h3>
+                    <div id="intro1">
                     <p>EXPLORE WITHOUT LIMITS</p>
                     <h1>Your journey<br>starts here</h1>
                     <p>Discover remarkable places and create memories that last a lifetime.</p>
                     <p>Trusted travel, thoughtfully managed.</p>
+                    </div>
                 </fieldset>
             </td>
-            <td>
+            <td id="right">
                 <form method="post" novalidate>
                     <fieldset>
-                        <p>Welcome To Tour Management System</p>
+                        <div id="login11">
+                        <p id="welcome">Welcome To Tour Management System</p>
                         <h1>LOGIN</h1>
                         <label for="user_mail">Email</label><br>
                         <input type="email" id="user_mail" name="user_mail" placeholder="Enter Email"><br>
                         <label for="user_password">Password</label><br>
                         <input type="password" id="user_password" name="user_password" placeholder="Enter Password"><br>
-                        <a href="">Forget Password?</a>
+                        <a id="forgetpass" href="">Forget Password?</a>
                         <br>
                         <input type="submit" value="Log-in">
-                        <p>Don't have account?</p>
-                        <a href="" >Create New Account</a>
+                        <p align="center">Don't have account?</p>
+                        <a id="createaccount" href="Form002.html">Create New Account</a>
+                        </div>
                     </fieldset>
                 </form>
             </td>

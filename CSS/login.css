@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f8fafc;
+}
+
+/* Main Split Layout via Table */
+table {
+    width: 100%;
+    height: 100vh;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+tr {
+    height: 100%;
+}
+
+td {
+    vertical-align: middle;
+    padding: 0;
+}
+
+/* Remove Default Fieldset Borders & Hide <br> tags for clean Flex/Grid spacing */
+fieldset {
+    border: none;
+}
+
+br {
+    display: none;
+}
+
+/* =========================================
+   LEFT PANEL (HERO SECTION)
+   ========================================= */
+td:first-child {
+    width: 52%;
+    position: relative;
+    /* Replace the URL below with your local road/mountain image path if you have it saved locally */
+    background: linear-gradient(180deg, rgba(13, 30, 58, 0.82) 0%, rgba(15, 76, 92, 0.85) 100%),
+                url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    color: #ffffff;
+}
+
+/* Top-Left Logo Icon ('T') */
+td:first-child::before {
+    content: "T";
+    position: absolute;
+    top: 48px;
+    left: 64px;
+    width: 38px;
+    height: 38px;
+    background-color: #26b1c6;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(38, 177, 198, 0.3);
+}
+
+/* Top-Left Logo Text ('Tour Management System') */
+td:first-child::after {
+    content: "Tour\A Management System";
+    white-space: pre;
+    position: absolute;
+    top: 49px;
+    left: 114px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+td:first-child fieldset {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 64px;
+    position: relative;
+}
+
+/* "EXPLORE WITHOUT LIMITS" */
+td:first-child fieldset p:nth-of-type(1) {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 16px;
+}
+
+/* "Your journey starts here" */
+td:first-child fieldset h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+/* Re-enable <br> inside the Hero H1 so it breaks cleanly into 2 lines */
+td:first-child fieldset h1 br {
+    display: inline;
+}
+
+/* "Discover remarkable places..." */
+td:first-child fieldset p:nth-of-type(2) {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 420px;
+    line-height: 1.6;
+}
+
+/* "Trusted travel, thoughtfully managed." (Pinned to bottom-left) */
+td:first-child fieldset p:nth-of-type(3) {
+    position: absolute;
+    bottom: 42px;
+    left: 64px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================
+   RIGHT PANEL (LOGIN FORM)
+   ========================================= */
+td:last-child {
+    width: 48%;
+    background-color: #f8fafc;
+}
+
+td:last-child form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+td:last-child fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+/* "Welcome To Tour Management System" */
+td:last-child fieldset > p:first-of-type {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #269fb1;
+    margin-bottom: 10px;
+}
+
+/* "LOGIN" */
+td:last-child fieldset h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 28px;
+}
+
+/* Injects "Enter your details to access your account." below LOGIN */
+td:last-child fieldset h1::after {
+    content: "Enter your details to access your account.";
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #94a3b8;
+    margin-top: 8px;
+    letter-spacing: 0;
+}
+
+/* Form Labels (Email, Password) */
+td:last-child label {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Email & Password Inputs */
+td:last-child input[type="email"],
+td:last-child input[type="password"] {
+    width: 100%;
+    height: 46px;
+    padding: 0 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #1e293b;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+td:last-child input[type="password"] {
+    margin-bottom: 12px;
+}
+
+td:last-child input[type="email"]::placeholder,
+td:last-child input[type="password"]::placeholder {
+    color: #94a3b8;
+}
+
+td:last-child input[type="email"]:focus,
+td:last-child input[type="password"]:focus {
+    border-color: #269fb1;
+    box-shadow: 0 0 0 3px rgba(38, 159, 177, 0.12);
+}
+
+/* "Forget Password?" Link */
+td:last-child fieldset > a:first-of-type {
+    align-self: flex-end;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #269fb1;
+    text-decoration: none;
+    margin-bottom: 24px;
+}
+
+td:last-child fieldset > a:first-of-type:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button ("Log-in") */
+td:last-child input[type="submit"] {
+    width: 100%;
+    height: 48px;
+    background-color: #172554;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    padding: 0 22px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -5px rgba(23, 37, 84, 0.35);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-bottom: 26px;
+    /* Adds the right arrow icon on the button */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath fill-
