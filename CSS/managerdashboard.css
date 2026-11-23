@@ -1,0 +1,5 @@
+/* Action buttons under the table */
+#actionbuttons {
+    display: flex;
+    gap: 10px;
+}

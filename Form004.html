@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,6 +55,174 @@
         <input type="button" value="Add New Package">
         <input type="button" value="Assign Tour Guide">
         <input type="button" value="View Reports">
+    </div>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/dashboardcommon.css">
+    <link rel="stylesheet" href="CSS/managerdashboard.css">
+    <title>Manager Dashboard</title>
+</head>
+<body>
+    
+    <div id="dashboardoption">
+        <div id="brand">
+            <h1 id="logo">T</h1>
+            <h4 id="logo2">Tour Management System</h4>
+        </div>
+
+        <ul id="dashboardlist">
+            <li class="active"><a href="Form004.html">Dashboard</a></li>
+            <li><a href="#">Manage Packages</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">Assign Guide</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="Form001.html">Logout</a></li>
+        </ul>
+
+        <div id="sidebaruser">
+            <span class="avatar">M</span>
+            <div>
+                <p id="sidebarname">Agency Manager</p>
+                <p id="sidebarstatus">Online</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="header">
+        <div id="headertitle">
+            <h4>Overview</h4>
+            <h3>Agency Manager Dashboard</h3>
+        </div>
+        <div id="headeruser">
+            <input type="button" id="notifybtn" value="&#9776;" title="Notifications">
+            <span class="avatar">M</span>
+            <div>
+                <p id="welcometext">Welcome back</p>
+                <p id="welcomename">Hi, Manager</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="maincontent">
+        <table id="layouttable">
+            <tr>
+                <td>
+                    <table id="statstable">
+                        <tr>
+                            <td class="statcard blue">
+                                <span class="statarrow">&#8599;</span>
+                                <span class="staticon">&#9636;</span>
+                                <div>
+                                    <p class="statlabel">Packages</p>
+                                    <p class="statnumber">34</p>
+                                </div>
+                            </td>
+                            <td class="statcard green">
+                                <span class="statarrow">&#8599;</span>
+                                <span class="staticon">&#9638;</span>
+                                <div>
+                                    <p class="statlabel">Bookings</p>
+                                    <p class="statnumber">56</p>
+                                </div>
+                            </td>
+                            <td class="statcard red">
+                                <span class="statarrow">&#8599;</span>
+                                <span class="staticon">&#9639;</span>
+                                <div>
+                                    <p class="statlabel">Pending</p>
+                                    <p class="statnumber">12</p>
+                                </div>
+                            </td>
+                            <td class="statcard orange">
+                                <span class="statarrow">&#8599;</span>
+                                <span class="staticon">&#9786;</span>
+                                <div>
+                                    <p class="statlabel">Guides</p>
+                                    <p class="statnumber">18</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <fieldset id="recentbookings">
+                        <legend>Latest Activity</legend>
+                        <p>Recent Bookings</p>
+                        <a href="#" class="viewall">View All &rarr;</a>
+                        <table class="datatable">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Package</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Noman</td>
+                                    <td>Bali Adventure</td>
+                                    <td>12 May 2024</td>
+                                    <td>$499</td>
+                                    <td><span class="status approved">Approved</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Labib</td>
+                                    <td>Swiss Alps Escape</td>
+                                    <td>10 Jun 2024</td>
+                                    <td>$899</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Tushin</td>
+                                    <td>Thailand Explorer</td>
+                                    <td>22 Jun 2024</td>
+                                    <td>$699</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div id="actionbuttons">
+                        <input type="button" id="addpackagebtn" value="Add New Package">
+                        <input type="button" id="assignguidebtn" class="btnteal" value="Assign Tour Guide">
+                        <input type="button" id="viewreportsbtn" class="btnlight" value="View Reports">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    
+    <div id="pageswitcher">
+        <a href="Form001.html">Login</a>
+        <a href="Form002.html">Register</a>
+        <a href="Form003.html">Tourist</a>
+        <a href="Form004.html" class="current">Agency Manager</a>
+        <a href="Form005.html">Tour Guide</a>
+        <a href="Form006.html">Admin</a>
     </div>
 </body>
 </html>

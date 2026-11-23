@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -74,6 +74,185 @@
             <legend>Distribution</legend>
             <h5>Bookings by Status</h5>
         </fieldset>
+    </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/dashboardcommon.css">
+    <link rel="stylesheet" href="CSS/admindashboard.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="dashboardoption">
+        <div id="brand">
+            <h1 id="logo">T</h1>
+            <h4 id="logo2">Tour Management System</h4>
+        </div>
+
+        <ul id="dashboardlist">
+            <li class="active"><a href="Form006.html">Dashboard</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="Form001.html">Logout</a></li>
+        </ul>
+
+        <div id="sidebaruser">
+            <span class="avatar">A</span>
+            <div>
+                <p id="sidebarname">Admin</p>
+                <p id="sidebarstatus">Online</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top header -->
+    <div class="header">
+        <div id="headertitle">
+            <h4>Overview</h4>
+            <h3>Admin Dashboard</h3>
+        </div>
+        <div id="headeruser">
+            <input type="button" id="notifybtn" value="&#9776;" title="Notifications">
+            <span class="avatar">A</span>
+            <div>
+                <p id="welcometext">Welcome back</p>
+                <p id="welcomename">Hi, Admin</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div id="maincontent">
+        <table id="layouttable">
+            <tr>
+                <td>
+                    <table id="statstable">
+                        <tr>
+                            <td class="statcard blue">
+                                <span class="statarrow">&#8599;</span>
+                                <span class="staticon">&#9786;</span>
+                                <div>
+                                    <p class="statlabel">Users</p>
+                                    <p class="statnumber">342</p>
+                                </div>
+                            </td>
+                            <td class="statcard green">
+                                <span class="statarrow">&#8599;</span>
+                                <span class="staticon">&#9638;</span>
+                                <div>
+                                    <p class="statlabel">Bookings</p>
+                                    <p class="statnumber">589</p>
+                                </div>
+                            </td>
+                            <td class="statcard orange">
+                                <span class="statarrow">&#8599;</span>
+                                <span class="staticon">&#9636;</span>
+                                <div>
+                                    <p class="statlabel">Packages</p>
+                                    <p class="statnumber">24</p>
+                                </div>
+                            </td>
+                            <td class="statcard teal">
+                                <span class="statarrow">&#8599;</span>
+                                <span class="staticon">&#9639;</span>
+                                <div>
+                                    <p class="statlabel">Categories</p>
+                                    <p class="statnumber">12</p>
+                                </div>
+                            </td>
+                            <td class="statcard red">
+                                <span class="statarrow">&#8599;</span>
+                                <span class="staticon">&#9906;</span>
+                                <div>
+                                    <p class="statlabel">Destinations</p>
+                                    <p class="statnumber">15</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table id="cardstable">
+                        <tr>
+                            <td>
+                                <fieldset id="performance">
+                                    <legend>Performance</legend>
+                                    <p>Bookings Overview</p>
+                                    <table id="performancetable">
+                                        <tr>
+                                            <td>Total Bookings</td>
+                                            <td>589</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Approved</td>
+                                            <td>177</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pending</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Completed</td>
+                                            <td>312</td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            </td>
+
+                            <td>
+                                <fieldset id="popularplaces">
+                                    <legend>Popular Places</legend>
+                                    <p>Top Destinations</p>
+                                    <ol id="toplist">
+                                        <li>Bali Adventure<span>200 bookings</span></li>
+                                        <li>Switzerland<span>156 bookings</span></li>
+                                        <li>Thailand<span>105 bookings</span></li>
+                                    </ol>
+                                </fieldset>
+                            </td>
+
+                            <td>
+                                <fieldset id="distribution">
+                                    <legend>Distribution</legend>
+                                    <p>Bookings by Status</p>
+                                    <div id="donut"><span>589</span></div>
+                                    <ul id="legend">
+                                        <li><span class="dot pendingdot"></span>Pending (17%)</li>
+                                        <li><span class="dot approveddot"></span>Approved (30%)</li>
+                                        <li><span class="dot completeddot"></span>Completed (53%)</li>
+                                    </ul>
+                                </fieldset>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Page switcher (prototype navigation) -->
+    <div id="pageswitcher">
+        <a href="Form001.html">Login</a>
+        <a href="Form002.html">Register</a>
+        <a href="Form003.html">Tourist</a>
+        <a href="Form004.html">Agency Manager</a>
+        <a href="Form005.html">Tour Guide</a>
+        <a href="Form006.html" class="current">Admin</a>
     </div>
 </body>
 </html>

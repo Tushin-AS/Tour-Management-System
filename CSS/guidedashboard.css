@@ -1,0 +1,48 @@
+/* Two columns need a horizontal gap, so open up the layout table here */
+#layouttable {
+    border-spacing: 16px 20px;
+    margin: 0 -16px;
+    width: calc(100% + 32px);
+}
+
+#leftcolumn {
+    width: 36%;
+    vertical-align: top;
+}
+
+#rightcolumn {
+    vertical-align: top;
+
+    fieldset + fieldset {
+        margin-top: 16px;
+    }
+}
+
+/* Manage Trip card */
+#updatebtn {
+    width: 100%;
+    margin-top: 4px;
+    padding: 14px;
+}
+
+/* Add Note button sits in the top right of the Guidelines card */
+#addnotebtn {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    padding: 8px 16px;
+    font-size: 11px;
+}
+
+/* Tourist list card */
+#touristlist {
+    ul {
+        list-style: none;
+    }
+
+    li {
+        font-size: 11px;
+        color: #475569;
+        padding: 3px 0 3px 16px;
+    }
+}

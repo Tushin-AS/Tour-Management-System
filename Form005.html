@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -61,6 +61,177 @@
             </tr>
         </table>
        </fieldset>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/dashboardcommon.css">
+    <link rel="stylesheet" href="CSS/guidedashboard.css">
+    <title>Tour Guide Dashboard</title>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="dashboardoption">
+        <div id="brand">
+            <h1 id="logo">T</h1>
+            <h4 id="logo2">Tour Management System</h4>
+        </div>
+
+        <ul id="dashboardlist">
+            <li class="active"><a href="Form005.html">Dashboard</a></li>
+            <li><a href="#">My Schedule</a></li>
+            <li><a href="#">Upload Status</a></li>
+            <li><a href="#">Guidelines</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="Form001.html">Logout</a></li>
+        </ul>
+
+        <div id="sidebaruser">
+            <span class="avatar">G</span>
+            <div>
+                <p id="sidebarname">Tour Guide</p>
+                <p id="sidebarstatus">Online</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top header -->
+    <div class="header">
+        <div id="headertitle">
+            <h4>Overview</h4>
+            <h3>Tour Guide Dashboard</h3>
+        </div>
+        <div id="headeruser">
+            <input type="button" id="notifybtn" value="&#9776;" title="Notifications">
+            <span class="avatar">G</span>
+            <div>
+                <p id="welcometext">Welcome back</p>
+                <p id="welcomename">Hi, Guide</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div id="maincontent">
+        <table id="layouttable">
+            <tr>
+                <td colspan="2">
+                    <fieldset id="assignedschedule">
+                        <legend>Upcoming Work</legend>
+                        <p>My Assigned Schedule</p>
+                        <table class="datatable">
+                            <thead>
+                                <tr>
+                                    <th>Package</th>
+                                    <th>Date</th>
+                                    <th>Tourists</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bali Adventure</td>
+                                    <td>12 May 2024</td>
+                                    <td>12</td>
+                                    <td><span class="status inprogress">In Progress</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Switzerland Trip</td>
+                                    <td>10 Jun 2024</td>
+                                    <td>15</td>
+                                    <td><span class="status scheduled">Scheduled</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Thailand Explorer</td>
+                                    <td>22 Jun 2024</td>
+                                    <td>10</td>
+                                    <td><span class="status scheduled">Scheduled</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="leftcolumn">
+                    <fieldset id="managetrip">
+                        <legend>Manage Trip</legend>
+                        <p>Update Tour Status</p>
+                        <label for="sel_p">Select Package</label>
+                        <select name="sel_p" id="sel_p">
+                            <option value="bali">Bali Adventure</option>
+                            <option value="switzerland">Switzerland Trip</option>
+                            <option value="thailand">Thailand Explorer</option>
+                        </select>
+                        <label for="sel_sta">Select Status</label>
+                        <select name="sel_sta" id="sel_sta">
+                            <option value="scheduled">Scheduled</option>
+                            <option value="inprogress" selected>In Progress</option>
+                            <option value="completed">Completed</option>
+                            <option value="delayed">Delayed</option>
+                        </select>
+                        <input type="button" id="updatebtn" value="Update Status">
+                    </fieldset>
+                </td>
+
+                <td id="rightcolumn">
+                    <fieldset id="guidelines">
+                        <legend>Important Information</legend>
+                        <p>Guidelines</p>
+                        <input type="button" id="addnotebtn" value="Add Note">
+                        <table class="datatable">
+                            <thead>
+                                <tr>
+                                    <th>Note</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bali Adventure - Meeting at 8:00 AM</td>
+                                    <td>12 May 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Switzerland Trip - Carry warm clothes.</td>
+                                    <td>10 Jun 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Thailand Explorer - Bring travel docs.</td>
+                                    <td>22 Jun 2024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="touristlist">
+                        <p>Tourists in Bali Adventure</p>
+                        <ul>
+                            <li>Noman</li>
+                            <li>Tushin</li>
+                            <li>Porash</li>
+                            <li>Labib</li>
+                        </ul>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Page switcher (prototype navigation) -->
+    <div id="pageswitcher">
+        <a href="Form001.html">Login</a>
+        <a href="Form002.html">Register</a>
+        <a href="Form003.html">Tourist</a>
+        <a href="Form004.html">Agency Manager</a>
+        <a href="Form005.html" class="current">Tour Guide</a>
+        <a href="Form006.html">Admin</a>
     </div>
 </body>
 </html>
