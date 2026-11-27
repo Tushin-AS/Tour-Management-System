@@ -1,20 +1,24 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/touristdashboard.css">
     <title>Tourist Dashboard</title>
 </head>
 <body>
-    <div>
-        Tour Management System
+    <div id = "dashboardoption">
+        <h1 id="logo">T</h1>
+        <h4 id="logo2">Tour Management System</h4>
 
+        <div id = "dashboardlist">
         <ul>
             <li>Dashboard</li>
             <li>Search Tours</li>
             <li>My Bookings</li>
             <li>Reviews</li>
         </ul>
+        </div>
         <input type="button" value="Profile">
     </div>
 
@@ -85,6 +89,188 @@
                 </td>
             </tr>
         </table>
+    </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/touristdashboard.css">
+    <title>Tourist Dashboard</title>
+</head>
+<body>
+    <div id="dashboardoption">
+        <div id="brand">
+            <h1 id="logo">T</h1>
+            <h4 id="logo2">Tour Management System</h4>
+        </div>
+
+        <ul id="dashboardlist">
+            <li class="active"><a href="touristdashboard.html">Dashboard</a></li>
+            <li><a href="#">Search Tours</a></li>
+            <li><a href="#">My Bookings</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="Form001.html">Logout</a></li>
+        </ul>
+
+        <div id="sidebaruser">
+            <span class="avatar">T</span>
+            <div>
+                <p id="sidebarname">Tourist</p>
+                <p id="sidebarstatus">Online</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div id="headertitle">
+            <h4>Overview</h4>
+            <h3>Tourist Dashboard</h3>
+        </div>
+        <div id="headeruser">
+            <input type="button" id="notifybtn" value="&#9776;" title="Notifications">
+            <span class="avatar">T</span>
+            <div>
+                <p id="welcometext">Welcome back</p>
+                <p id="welcomename">Hi, Tourist</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="maincontent">
+        <table id="layouttable">
+            <tr>
+                <td>
+                    <fieldset id="searchcard">
+                        <legend>Find Your Next Journey</legend>
+                        <p>Search Tours</p>
+                        <table id="searchtable">
+                            <tr>
+                                <td><label for="destination">Destination</label></td>
+                                <td><label for="max_budget">Max Budget</label></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="destination" id="destination">
+                                        <option value="">All Destinations</option>
+                                        <option value="bali">Bali, Indonesia</option>
+                                        <option value="switzerland">Switzerland</option>
+                                        <option value="thailand">Thailand</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="max_budget" id="max_budget">
+                                        <option value="">Any Budget</option>
+                                        <option value="500">Under $500</option>
+                                        <option value="800">Under $800</option>
+                                        <option value="1000">Under $1000</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="button" id="searchbtn" value="Search">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <fieldset id="populartours">
+                        <legend>Discover</legend>
+                        <p>Popular Tours</p>
+                        <!-- <a href="#" id="viewall">View All &rarr;</a> -->
+                        <table class="datatable">
+                            <thead>
+                                <tr>
+                                    <th>Package</th>
+                                    <th>Destination</th>
+                                    <th>Price</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bali Adventure</td>
+                                    <td>Bali, Indonesia</td>
+                                    <td>$499</td>
+                                    <td>5 Days</td>
+                                </tr>
+                                <tr>
+                                    <td>Swiss Alps Escape</td>
+                                    <td>Switzerland</td>
+                                    <td>$899</td>
+                                    <td>7 Days</td>
+                                </tr>
+                                <tr>
+                                    <td>Thailand Explorer</td>
+                                    <td>Thailand</td>
+                                    <td>$699</td>
+                                    <td>4 Days</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <fieldset id="recentbookings">
+                        <legend>Your Activity</legend>
+                        <p>My Recent Bookings</p>
+                        <table class="datatable">
+                            <thead>
+                                <tr>
+                                    <th>Package</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr>
+                                    <td>Bali Adventure</td>
+                                    <td>12 May 2024</td>
+                                    <td><span class="status approved">Approved</span></td>
+                                    <td>$499</td>
+                                </tr>
+                                <tr>
+                                    <td>Swiss Alps Escape</td>
+                                    <td>10 Jun 2024</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td>$899</td>
+                                </tr>
+                                <tr>
+                                    <td>Thailand Explorer</td>
+                                    <td>22 Jun 2024</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td>$699</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="pageswitcher">
+        <a href="Form001.html">Login</a>
+        <a href="Form002.html">Register</a>
+        <a href="Form003.html">Tourist</a>
+        <a href="Form004.html" class="current">Agency Manager</a>
+        <a href="Form005.html">Tour Guide</a>
+        <a href="Form006.html">Admin</a>
     </div>
 </body>
 </html>
